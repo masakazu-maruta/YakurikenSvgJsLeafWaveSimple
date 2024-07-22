@@ -4,6 +4,26 @@ body{
   display: flex;
   align-items: center;
 }
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header-title {
+  width: 200px;
+  margin-top: 10px;
+}
+
+.header-title h1 {
+  color: #41b732;
+  text-align: center;
+  line-height: 1.2;
+}
+
 #container{
   margin: auto;
   width: 100%;
