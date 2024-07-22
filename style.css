@@ -1,0 +1,17 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+#container {
+  margin: auto;
+  width: 100%;
+  height: 15%;
+}
+#container .leafs {
+  position: absolute;
+  height: 7.2em;
+  width: 7.2em;
+}/*# sourceMappingURL=style.css.map */
