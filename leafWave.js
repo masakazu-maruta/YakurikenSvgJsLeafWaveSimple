@@ -1,22 +1,8 @@
-const leafNumber = 30;
-
-let Leafs = [];
-let leafSources = [
-    'svgs/leaf-1.svg',
-    'svgs/leaf-2.svg',
-    'svgs/leaf-3.svg',
-    'svgs/leaf-4.svg',
-    'svgs/leaf-5.svg'
-];
-
+const leafNumber = 13;
 var container = document.getElementById('container');
-for (let i = 0; i < leafNumber; i++) {
-    let svgTag = document.createElement('img');
-    svgTag.src = leafSources[i % leafSources.length];
-    svgTag.setAttribute('class', 'leafs');
-    container.appendChild(svgTag);
-    Leafs.push(svgTag);
-}
+let Leafs = Array.from(container.children);
+
+//アニメーションのコード
 const startAnimation = () => {
     requestAnimationFrame(animation);
 }
