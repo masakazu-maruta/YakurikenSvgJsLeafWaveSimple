@@ -1,7 +1,6 @@
-const leafNumber = 13;
-var container = document.getElementById('container');
-let Leafs = Array.from(container.children);
-
+const container = document.getElementById('container');
+const Leafs = Array.from(container.children);
+const leafNumber = Leafs.length;
 //アニメーションのコード
 const startAnimation = () => {
     requestAnimationFrame(animation);
@@ -27,11 +26,10 @@ const wave = (direction, duration, currentTime) => {
     }
 }
 
-const spaceBetween = 160;
 const waveSpeed = 0.25;
 const nextX = (index, currentTime, direction, leaf) => {
-    const leafDestination = leafNumber * spaceBetween;
-    const firstPos = index * spaceBetween;
+    const leafDestination = leafNumber * leaf.getBoundingClientRect().width;
+    const firstPos = leafDestination * (index - 1) / leafNumber;
     const offset = ((currentTime - firstTime) * waveSpeed);
     if (direction == dirRight) {
         return (firstPos + offset) % (leafDestination) - leaf.getBoundingClientRect().width;

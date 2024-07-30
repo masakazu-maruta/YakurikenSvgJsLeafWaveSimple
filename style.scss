@@ -3,6 +3,13 @@ $leafSource_2: "svgs/leaf-2.svg";
 $leafSource_3: "svgs/leaf-3.svg";
 $leafSource_4: "svgs/leaf-4.svg";
 $leafSource_5: "svgs/leaf-5.svg";
+
+$breakpoints: (
+  "pc": "screen and (min-width: 1280px)",
+  "tablet": "screen and (max-width: 1279px)",
+  "sp": "screen and (max-width: 420px)",
+  "small-screen": "screen and (max-width: 320px)",
+);
 //3 5 2 4 1 3 5 3 5 2 4 1
 
 body {
@@ -32,17 +39,51 @@ header {
   line-height: 1.2;
 }
 
+@media screen and (min-width: 1280px) {
+  #container {
+    height: 30%;
+    > * {
+      height: 9.6em;
+      width: 9.6em;
+    }
+  }
+}
+@media screen and (max-width: 1279px) {
+  #container {
+    height: 25%;
+    > * {
+      height: 7.2em;
+      width: 7.2em;
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  #container {
+    height: 20%;
+    > * {
+      height: 5.6em;
+      width: 5.6em;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  #container {
+    height: 15%;
+    > * {
+      height: 4em;
+      width: 4em;
+    }
+  }
+}
+
 #container {
   margin: auto;
   width: 100%;
-  height: 30%;
   position: relative;
   > * {
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    height: 9.6em;
-    width: 9.6em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +107,7 @@ header {
 #leaf-2 img {
   height: 50%;
   width: 50%;
-  transform: rotate(-40deg);
+  transform: rotate(-45deg);
 }
 #leaf-3 img {
   height: 100%;
@@ -81,11 +122,12 @@ header {
 #leaf-5 img {
   height: 50%;
   width: 50%;
-  transform: scale(-1, -1);
+  transform: rotate(180deg) scaleX(-1);
 }
 #leaf-6 img {
   height: 80%;
   width: 80%;
+  transform: rotate(-64deg);
 }
 #leaf-7 img {
   height: 80%;
@@ -94,20 +136,20 @@ header {
 #leaf-8 img {
   height: 50%;
   width: 50%;
+  transform: rotate(-196deg);
 }
 #leaf-9 img {
   height: 50%;
   width: 50%;
+  transform: rotate(-45deg);
 }
 #leaf-10 img {
   height: 100%;
   width: 100%;
+  transform: rotate(196deg);
 }
 #leaf-11 img {
   height: 70%;
   width: 70%;
-}
-#leaf-12 img {
-  height: 70%;
-  width: 70%;
+  transform: rotate(172deg);
 }
